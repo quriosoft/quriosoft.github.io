@@ -1,0 +1,125 @@
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Bold.07a7a862a0b1d4e833892a346ce9.28491e42f0a298cfc3d0ed0fc357dc23.woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Black.444a9206bffab75243dc822f79b.9796587a646c3c1c8a7b93893bdb7788.woff2);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BoldItalic.4c787bc31c034cef9f5671.404d197cfe9800d651c8fad74c41ca04.woff2);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BlackItalic.de97fe02790068b25c78f.163ee63b6cf42e4daad743c29db6f055.woff2);
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Bold.07a7a862a0b1d4e833892a346ce9.28491e42f0a298cfc3d0ed0fc357dc23.woff2);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BoldItalic.4c787bc31c034cef9f5671.404d197cfe9800d651c8fad74c41ca04.woff2);
+    font-style: italic;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Bold.07a7a862a0b1d4e833892a346ce9.28491e42f0a298cfc3d0ed0fc357dc23.woff2);
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BoldItalic.4c787bc31c034cef9f5671.404d197cfe9800d651c8fad74c41ca04.woff2);
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Bold.07a7a862a0b1d4e833892a346ce9.28491e42f0a298cfc3d0ed0fc357dc23.woff2);
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BoldItalic.4c787bc31c034cef9f5671.404d197cfe9800d651c8fad74c41ca04.woff2);
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Bold.07a7a862a0b1d4e833892a346ce9.28491e42f0a298cfc3d0ed0fc357dc23.woff2);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BoldItalic.4c787bc31c034cef9f5671.404d197cfe9800d651c8fad74c41ca04.woff2);
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Black.444a9206bffab75243dc822f79b.9796587a646c3c1c8a7b93893bdb7788.woff2);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BlackItalic.de97fe02790068b25c78f.163ee63b6cf42e4daad743c29db6f055.woff2);
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Black.444a9206bffab75243dc822f79b.9796587a646c3c1c8a7b93893bdb7788.woff2);
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BlackItalic.de97fe02790068b25c78f.163ee63b6cf42e4daad743c29db6f055.woff2);
+    font-style: italic;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-Black.444a9206bffab75243dc822f79b.9796587a646c3c1c8a7b93893bdb7788.woff2);
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: YAEfHGJFE5c-0;
+    src: url(https://s3.amazonaws.com/font-public.canva.com/YAEfHGJFE5c/0/Nunito-BlackItalic.de97fe02790068b25c78f.163ee63b6cf42e4daad743c29db6f055.woff2);
+    font-style: italic;
+    font-weight: 900;
+}
