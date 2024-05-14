@@ -2461,7 +2461,12 @@
                                     color: #fff !important;
                                     outline: 0 !important;
                                 }
-                                .zcwf_lblLeft .zcwf_col_fld input[type=text], input[type=password], .zcwf_lblLeft .zcwf_col_fld textarea {
+                                .zcwf_lblLeft .zcwf_col_fld input[type=text], 
+                                .zcwf_lblLeft .zcwf_col_fld input[type=password], 
+                                .zcwf_lblLeft .zcwf_col_fld input[type=email], 
+                                .zcwf_lblLeft .zcwf_col_fld input[type=tel], 
+                                .zcwf_lblLeft .zcwf_col_fld select,
+                                .zcwf_lblLeft .zcwf_col_fld textarea {
                                     width: 100%;
                                     border: 1px solid #c0c6cc;
                                     resize: vertical;
@@ -2630,7 +2635,7 @@
                                         <label for='Mobile'>Mobile<span class="req">*</span></label>
                                     </div>
                                     <div class="zcwf_col_fld">
-                                        <input type='text' id='Mobile' name='Mobile' maxlength='30' class="ctc-form-field" />
+                                        <input type='text' ftype='tel' id='Mobile' name='Mobile' placeholder="+1 123-456-7890" minlength="10" maxlength='30' class="ctc-form-field" />
                                         <div class='zcwf_col_help'></div>
                                         <div id='Mobile_err' class="err"></div>
                                     </div>
@@ -2640,7 +2645,7 @@
                                         <label for='Email'>Email<span class="req">*</span></label>
                                     </div>
                                     <div class="zcwf_col_fld">
-                                        <input type='text' ftype='email' autocomplete='false' id='Email' name='Email' crmlabel='' maxlength='100' class="ctc-form-field" />
+                                        <input type='text' ftype='email' id='Email' name='Email' crmlabel='' maxlength='100' class="ctc-form-field" />
                                         <div class='zcwf_col_help'></div>
                                         <div id='Email_err' class="err"></div>
                                     </div>
@@ -2692,7 +2697,7 @@
                                     element.innerHTML = `<span>${message}</span>`;
                                     input.classList.add('error');
                                 }
-                                function validateEmail6221850000000463884() {
+                                function validateEmail() {
                                     var form = document.forms["WebToLeads6221850000000463884"];
                                     var emailFld = form.querySelectorAll("[ftype=email]");
                                     var i;
@@ -2702,13 +2707,28 @@
                                             var atpos = emailVal.indexOf("@");
                                             var dotpos = emailVal.lastIndexOf(".");
                                             if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
-                                                showError(emailFld[i].id, "Please enter a valid email address.");
+                                                showError(emailFld[i].id, "Please enter a valid email address. <br>Example: you@yourcompany.com");
                                                 emailFld[i].focus();
                                                 return false;
                                             }
                                         }
                                     }
                                     return true;
+                                }
+                                // Validate phone number function
+                                function validatePhoneNumber() {
+                                    var form = document.forms["WebToLeads6221850000000463884"];
+                                    var fields = form.querySelectorAll("[ftype=tel]");
+                                    var i;
+                                    var allValid = true;
+                                    for (i = 0; i < fields.length; i++) {
+                                        var val = fields[i].value;
+                                        if (!/^\+1 \d{3}-\d{3}-\d{4}$/.test(val)) {
+                                            showError(fields[i].id, "Please enter a valid number. <br>Example: +1 123-456-7890.");
+                                            allValid = false;
+                                        }
+                                    }
+                                    return allValid;
                                 }
 
                                 function checkMandatory6221850000000463884() {
@@ -2763,7 +2783,10 @@
                                             } catch (e) { }
                                         }
                                     }
-                                    if (!validateEmail6221850000000463884()) {
+                                    if (!validateEmail()) {
+                                        isValid = false;
+                                    }
+                                    if (!validatePhoneNumber()) {
                                         isValid = false;
                                     }
                                     if(!isValid) {
@@ -2817,6 +2840,21 @@
                                             });
                                         }
                                     });
+
+                                    function phoneMask() { 
+                                        var num = $(this).val().replace(/\D/g,'');
+                                        if(num.length == 1) {
+                                            num = `1${num}`;
+                                        }
+
+                                        var val = `+${num.substring(0,1)} ${num.substring(1,4)}-${num.substring(4,7)}-${num.substring(7,11)}`
+                                        if(num.length > 1) {
+                                            $(this).val(val); 
+                                        } else {
+                                            $(this).val(""); 
+                                        }
+                                    }
+                                    $('#webform6221850000000463884 input[ftype=tel]').keyup(phoneMask)
                                 });
                                 function tooltipShow6221850000000463884(el) {
                                     var tooltip = el.nextElementSibling;
