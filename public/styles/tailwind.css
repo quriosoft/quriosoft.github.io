@@ -754,10 +754,6 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -1363,12 +1359,6 @@ video {
 
   .sm\:leading-6 {
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
   }
 }
 

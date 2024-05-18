@@ -1,0 +1,6 @@
+
+# Allow crawling of all content to anyone
+User-agent: *
+Allow: /
+
+Sitemap: /sitemap.xml
