@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="scroll-pt-[40px] sm:scroll-pt-[60px]">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=en-US" />
@@ -64,15 +64,14 @@
 
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script async type="module" crossorigin src="/assets/index.31795cfa.js"></script>
-    <link rel="stylesheet" href="/assets/index.16db1a8a.css">
+    <link rel="stylesheet" href="/assets/index.02679e2e.css">
   </head>
   <body>
     <div id="layout">
-      <header class="topNav light fixed z-50 w-full p-5">
+      <header class="topNav light fixed z-50 w-full px-5 top-0 left-0 right-0">
     <nav class="max-w-screen-2xl mx-auto lg:px-20">
         <div class="w-full flex items-center flex-wrap lg:px-2 ">
-            <a href="/" class="logo py-2 inline-flex items-center">
+            <a href="/" class="logo sm:py-2 inline-flex items-center">
                 <span class="font-bold tracking-wide">
                     QurioSoft
                 </span>
@@ -113,7 +112,7 @@
       <main>
         
 <a id="home" aria-hidden="true" style="visibility: hidden"></a>
-<section class="isolate p-5 pt-10 mt-16 -mb-12 min-w-svh min-h-svh lg:min-h-max dark">
+<section class="isolate p-5 pt-10 min-w-svh min-h-svh 2xl:min-h-max dark">
     
 <div class="h-full lg:py-18 max-w-screen-2xl mx-auto lg:px-20">
     <div class="grid grid-cols-1 gap-x-8 sm:grid-cols-2 lg:px-2">
@@ -143,6 +142,14 @@
   
 </div>
 
+
+<div class="mx-auto max-w-full lg:mx-0">
+  
+  
+</div>
+
+
+
                 <div class="mt-20 text-center sm:text-left">
                     <a href="/#services" class="pill w-auto inline-block rounded-full uppercase bg-black px-12 py-3 text-xl border-0">
                         Learn More
@@ -156,7 +163,7 @@
 </section>
 
 <a id="about" aria-hidden="true" style="visibility: hidden"></a>
-<section class="isolate p-5 pt-10 mt-16 -mb-12 min-w-svh min-h-svh lg:min-h-max light">
+<section class="isolate p-5 pt-10 min-w-svh min-h-svh 2xl:min-h-max light">
     
 <div class="h-full lg:py-18 max-w-screen-2xl mx-auto lg:px-20">
     <div class="lg:px-2">
@@ -242,7 +249,7 @@
 </section>
 
 <a id="services" aria-hidden="true" style="visibility: hidden"></a>
-<section class="isolate p-5 pt-10 mt-16 -mb-12 min-w-svh min-h-svh lg:min-h-max dark">
+<section class="isolate p-5 pt-10 min-w-svh min-h-svh 2xl:min-h-max dark">
     
 <div class="h-full lg:py-18 max-w-screen-2xl mx-auto lg:px-20">
     <div class="lg:px-2">
@@ -446,7 +453,7 @@
 </section>
 
 <a id="contact-us" aria-hidden="true" style="visibility: hidden"></a>
-<section class="isolate p-5 pt-10 mt-16 -mb-12 min-w-svh min-h-svh lg:min-h-max light">
+<section class="isolate p-5 pt-10 min-w-svh min-h-svh 2xl:min-h-max light">
     
 <div class="h-full lg:py-18 max-w-screen-2xl mx-auto lg:px-20">
     <div class="lg:px-2">
@@ -479,7 +486,7 @@
                     <h3 class="mt-5 text-2xl font-semibold leading-7 text-blue-400 uppercase">Request Quote</h3>
                     <div id="request-quote">
                         
-<form id="webform6221850000000463884" name="WebToLeads6221850000000463884" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" class="rounded rounded-lg border-solid border-2 border-slate-500 bg-white p-8 mt-5" onSubmit='javascript: return checkMandatory6221850000000463884();' onReset="javascript:clearErrors(); return true;">
+<form id="webform6221850000000463884" name="WebToLeads6221850000000463884" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" class="rounded-lg border-solid border-2 border-slate-500 bg-white p-8 mt-5" onSubmit='javascript: return checkMandatory6221850000000463884();' onReset="javascript:clearErrors(); return true;">
     
         
         
@@ -900,8 +907,14 @@
 
 
       </main>
-      <footer class="dark p-4 mt-12 sm:p-6">
-    <p class="text-xl font-semibold">Copyright &COPY; 2024 QurioSoft LLC. <span class="block sm:inline">All rights reserved.</span></p>
+      <footer class="dark p-4 sm:p-6">
+    <div class="flex flex-wrap items-center">
+        <p class="flex-1 text-md font-thin">Copyright &COPY; 2024 QurioSoft LLC. <span class="block sm:inline">All rights reserved.</span></p>
+        <p class="pt-3 sm:pt-0 text-left sm:text-right text-md font-thin">
+            <a href="/legal/privacy-policy" target="_blank" class="pl-0 text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Privacy Policy</a> | 
+            <a href="/legal/cookie-policy" target="_blank" class="text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Cookie Policy</a>
+        </p>
+    </div>
 </footer>
     </div>
     <script>
@@ -909,14 +922,23 @@
           $(".nav-toggler").each(function (_, navToggler) {
               var target = $(navToggler).data("target");
               $(navToggler).on("click", function () {
-                  $(target).animate({
-                      height: "toggle",
-                  });
+                var style = $(navToggler).data("animate");
+                style = style ? style : "height";
+
+                var toggle = {};
+                toggle[style] = "toggle";
+
+                $(target).animate(toggle);
               });
           });
       });
   </script>
-  <!-- Google tag (gtag.js) -->
+  <!-- cookie consent banner -->
+<script
+  type="text/javascript"
+  src="https://app.termly.io/resource-blocker/0a7585ec-cb76-4eb9-b0ac-4be15a6c952c?autoBlock=on"
+></script>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMJFGFZ18B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/</loc>
+    <loc>https://quriosoft.com/</loc>
     <lastmod>2024-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://quriosoft.com/legal/privacy-policy/</loc>
+    <lastmod>2024-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://quriosoft.com/legal/cookie-policy/</loc>
+    <lastmod>2024-05-20</lastmod>
   </url>
   </urlset>
