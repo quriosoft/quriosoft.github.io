@@ -65,21 +65,24 @@
     <!-- styles -->
     
     
-    <link rel="stylesheet" href="/assets/index.d567fc9e.css">
+    <link rel="stylesheet" href="/assets/index.fd23dfdf.css">
   </head>
   <body>
     <div id="layout">
-      <div x-data="{ open: false }">
+      
+<div x-data="{ open: false }">
 <div class="fixed inset-0 bg-black bg-opacity-50 z-40" x-show="open" @click="open = false" x-transition:enter="ease-out duration-300" x-transition:leave="ease-in duration-200" style="display: none;"></div>
-<header class="topNav light fixed z-50 w-full px-5 top-0 left-0 right-0 border-b-2 border-black border-solid">
+<!-- border-gradient border-gradient-green only-top -->
+<header class="topNav light fixed z-50 w-full px-5 top-0 left-0 right-0 border-gradient border-gradient-bottom border-gradient-logo">
     <nav class="max-w-screen-2xl mx-auto lg:px-20">
-        <div class="w-full flex items-center flex-wrap lg:px-2 ">
-            <a href="/" class="logo sm:py-2 inline-flex items-center">
-                <span class="font-bold tracking-wide">
+        <div class="w-full flex items-center flex-wrap py-4 lg:px-2">
+            <a href="/" class="logo sm:py-2 inline-flex items-center space-x-2">
+                <img src="/assets/QS-Logo.svg" alt="QurioSoft logo" class="w-12 sm:w-16">
+                <span class="font-thin tracking-wide text-[2rem] sm:text-[3.2rem]">
                     QurioSoft
                 </span>
             </a>
-            <button @click="open = !open" style="width: 66px;"
+            <button @click="open = !open" style="width: 50px;"
                 class="text-white inline-flex p-2 rounded lg:hidden ml-auto hover:text-white outline-none">
                     <svg viewBox="0 0 24.0 24.0" preserveAspectRatio="none"
                         style="background: url('data:image/png;base64,')">
@@ -88,7 +91,8 @@
                         </path>
                     </svg>
             </button>
-            <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" :class="{'block': open, 'hidden': !open}" x-transition ><!-- @click.away="open = false" @keydown.escape.window="open = false" -->
+            <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto pt-3 sm:pt-5" :class="{'block': open, 'hidden': !open}" x-transition ><!-- @click.away="open = false" @keydown.escape.window="open = false" -->
+                <hr class="border-gradient-ultrathin border-gradient-bottom border-gradient-logo" />
                 <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
                     
                     <a href="/#home" @click="open = false" class="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded items-center justify-center text-xl font-semibold">
@@ -96,11 +100,11 @@
                     </a>
                     
                     <a href="/#about" @click="open = false" class="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded items-center justify-center text-xl font-semibold">
-                        <span>About</span>
+                        <span>About Us</span>
                     </a>
                     
                     <a href="/#services" @click="open = false" class="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded items-center justify-center text-xl font-semibold">
-                        <span>Services</span>
+                        <span>Solutions</span>
                     </a>
                     
                     <a href="/#contact-us" @click="open = false" class="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded items-center justify-center text-xl font-semibold">
@@ -528,13 +532,16 @@ United States
 </section>
 
       </main>
-      <footer class="dark p-4 sm:p-6">
-    <div class="flex flex-wrap flex-col sm:flex-row sm:items-center">
-        <p class="flex-1 text-md font-thin text-center sm:text-left">Copyright &COPY; 2024 QurioSoft LLC. <span class="block sm:inline">All rights reserved.</span></p>
-        <p class="pt-3 sm:pt-0 text-center sm:text-right text-md font-thin">
-            <a href="/legal/privacy-policy" target="_blank" class="pl-0 text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Privacy Policy</a> | 
-            <a href="/legal/cookie-policy" target="_blank" class="text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Cookie Policy</a>
-        </p>
+      <footer class="dark">
+    <div class="border-gradient-thin border-gradient-top border-gradient-logo"></div>
+    <div class="p-4 sm:p-6 max-w-screen-2xl mx-auto lg:px-20">
+        <div class="flex flex-wrap flex-col sm:flex-row sm:items-center">
+            <p class="flex-1 text-md font-thin text-center sm:text-left">Copyright &COPY; 2024 QurioSoft LLC. <span class="block sm:inline">All rights reserved.</span></p>
+            <p class="pt-3 sm:pt-0 text-center sm:text-right text-md font-thin">
+                <a href="/legal/privacy-policy" target="_blank" class="pl-0 text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Privacy Policy</a> | 
+                <a href="/legal/cookie-policy" target="_blank" class="text-gray-400 hover:text-blue-400 visited:hover:text-gray-400">Cookie Policy</a>
+            </p>
+        </div>
     </div>
 </footer>
     </div>
